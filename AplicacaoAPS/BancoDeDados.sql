@@ -35,5 +35,11 @@ CONSTRAINT fk_Disciplina FOREIGN KEY (fk_Disciplina) REFERENCES Disciplina (ID_D
 
 CREATE TABLE Disciplina(
 ID_Disciplina integer PRIMARY KEY,
-Nome varchar(15)
+CONSTRAINT fk_Curso FOREIGN KEY (fk_Curso) REFERENCES Curso (ID_Curso),
+Descricao text
+);
+
+CREATE TABLE Curso(
+ID_Curso integer PRIMARY KEY,
+Descricao text
 );
